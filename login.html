@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Less 17</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              desktop: "1366px",
+            },
+            minWidth: {
+              240: "240px",
+              270: "270px",
+              320: "320px",
+              768: "768px",
+              1366: "1366px",
+            },
+            padding: {
+              15: "15px",
+              55: "55px",
+            },
+            fontFamily: {
+              cormorant: ["Cormorant Garamond", "serif"],
+              poppins: ["Poppins", "sans-serif"],
+            },
+            fontSize: {
+              14: "14px",
+            },
+            colors: {
+              customSand: "#F0EAE4",
+              customBlack: "#1D1613",
+              customGray: "#9B9997",
+              customBrown: "#A87B62",
+            },
+            boxShadow: {
+              custom: "0px 5px 32px 0px rgba(226, 221, 215, 0.24)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="w-full min-w-320 md:min-w-768 desktop:min-w-1366 py-12 px-6 md:py-20 md:px-40 desktop:px-96 desktop:py-24">
+    <section class="shadow-custom bg-white rounded-lg p-6 md:p-12">
+      <header class="relative">
+        <img class="md:hidden desktop:hidden w-full" src="img/gold-earrings-intricate-patterns-mobile.png" alt="Gold earrings intricate patterns">
+        <img class="hidden md:block desktop:hidden w-full" src="img/gold-earrings-intricate-patterns-tab.png" alt="Gold earrings intricate patterns">
+        <img class="hidden desktop:block w-full" src="img/gold-earrings-intricate-patterns-desktop.png" alt="Gold earrings intricate patterns">
+        <svg class="w-6 h-6 absolute top-4 right-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+          <path d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" fill="#1D1613">
+        </svg>
+      </header>
+      <main class="bg-customSand p-4 md:px-12">
+        <h1 class="text-customBlack text-2xl font-bold font-cormorant text-center pt-4 md:text-3xl md:pt-12">
+          Log In
+        </h1>
+        <form class="flex flex-col gap-4 py-6">
+          <input id="email" name="email" class="pb-2 border-b border-customBlack bg-transparent placeholder-customGray text-14 font-medium font-poppins" type="email" placeholder="Your E-mail" required>
+          <input id="password" name="password" class="pb-2 border-b border-customBlack bg-transparent placeholder-customGray text-14 font-medium font-poppins" type="password" placeholder="Password" required>
+        </form>
+        <p class="text-customGray font-poppins text-xs text-right">
+          <a href="#" class="hover:underline">Forgot your password?</a>
+        </p>
+        <div class="flex justify-center mt-6">
+          <button class="w-full min-w-240 h-16 bg-customBrown text-white text-base font-medium font-poppins">
+            Log In
+          </button>
+        </div>
+        <p class="text-customGray font-poppins text-sm text-center mt-6">
+          Don't have an account?
+          <a href="#" class="text-customBlack font-medium hover:underline">Sign up</a>
+        </p>
+      </main>
+    </section>
+  </body>
+</html>
